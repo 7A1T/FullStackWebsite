@@ -17,4 +17,4 @@ Relational databases are not just one big table, you can make multiple tables an
 
 ### Schema
 The schema was built using drawsql.app.
-![database schema](https://drawsql.app/teams/personal-projects-14/diagrams/gomibostockdb/embed)
+![database](https://drawsql.app/teams/personal-projects-14/diagrams/gomibostockdb/embe)
