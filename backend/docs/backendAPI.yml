@@ -1,0 +1,76 @@
+openapi: '3.0.2'
+info:
+  title: GomiboBackend
+  version: '1.0'
+servers:
+  - url: https://api.server.test/v1
+components:
+  schemas:
+    StockItem:
+      type: object
+      properties:
+        id: 
+          type: integer
+        name:
+          type: string
+        unitPrice:
+          type: number
+    StockItemIds:
+      type: object
+      properties:
+        ids:
+          type: array
+          items: 
+            type: integer
+
+    Bin:
+      type: object
+      properties:
+        id:
+          type: integer
+        stock_item_id:
+          type: array
+          items:
+            $ref: '#/components/schemas/StockItemIds'
+    Shelf:
+      type: object
+      properties:
+        id:
+          type: integer
+        bin_ids:
+          type: array
+          items:
+            $ref: '#/components/schemas/Bin'
+    Rack:
+      type: object
+      properties:
+        id:
+          type: integer
+        shelf_ids:
+          type: array
+          items:
+            $ref: '#/components/schemas/Shelf'
+
+
+paths:
+  /stock-items/create:
+    put:
+      responses:
+        '200':
+          description: OK
+  /stock-items/{id}:
+    get:
+      responses:
+        '200':
+          description: A JSON array of products
+          content:
+            application/json:
+              schema:
+                type: array
+                items: 
+                  type: string
+    delete:
+      responses:
+        '204':
+          description: sucessfully deleted
+
