@@ -1,5 +1,9 @@
 # Best Practice naming conventions for this project
-### Files
+## General
+- Line length should aim for 80 characters
+- Naming uses Pascal case
+- 
+## Files
 I use Pascal case for functions and variables i.e. 'itemObjectThing'
 - filenames are written in pascal case i.e. fileNameOne
 - database models are prefixed by 'db' i.e. dbThing
