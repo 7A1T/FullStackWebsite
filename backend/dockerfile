@@ -1,4 +1,0 @@
-FROM php:8.2-cli
-COPY . /usr/src/stockapp
-WORKDIR /usr/src/stockapp
-CMD [ "php", "./your-script.php" ]
